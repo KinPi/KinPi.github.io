@@ -1,0 +1,40 @@
+@media all and (max-width: 650px) {
+
+    #right {
+        display: none;
+    }
+
+    #left {
+        top: 110px;
+    }
+
+    #header-div {
+        margin-top: 200px;
+    }
+
+    #header-div h1 {
+        font-size: 48px;
+    }
+
+    #olaf1, #olaf2 {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .donate h1 {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    #gold {
+        float: right;
+        width: 100px;
+        height: 100px;     
+    }
+
+    #donate-knight {
+        display: none;
+    }
+    
+}
