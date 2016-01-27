@@ -1,3 +1,42 @@
+#nav {
+    position: absolute;
+    top: 0;
+}
+
+nav {
+    z-index: 2;
+    padding-top: 5px;
+    position: fixed;
+    width: 100%;
+    background-color: lightblue;
+    border-bottom: 2px solid black;
+}
+
+nav ul {
+    z-index: 6;
+    text-align: center;
+}
+
+li {
+    z-index: 6;
+    display: inline-block;
+    margin: 4px 3%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    position: relative;
+    z-index: 6;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 0 0 black, 0 -2px 0 black, 0 2px 0 black, -2px 0 0 black;
+}
+
+li > a:hover, li > a:visited, li > a:active {
+    color: white;
+    text-decoration: none;
+}
+
 #left, #right {
     position: absolute;
     z-index: 0;
@@ -6,21 +45,21 @@
 #left {
     width: 272px;
     height: 245px;
-    top: 20px;
+    top: 55px;
     left: 70px;
 }
 
 #right {
     width: 330px;
     height: 280px;
-    top: 20px;
+    top: 55px;
     right: 30px;
 }
 
 #header-div {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    margin-top: 80px;
+    margin-top: 110px;
     display: block;
     background-color: lightblue;
     width: 100%;
@@ -51,7 +90,7 @@
 .jumbotron {
     text-align: center;
     background-color: lightblue;
-    margin: 25px;
+    margin: 40px 30px;
     border-radius: 20px;
     border: 2px solid black;
 }
