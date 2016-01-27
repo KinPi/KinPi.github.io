@@ -14,12 +14,26 @@
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+       <style>
+            .form-group {
+                text-align: center;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+    
+            .alert-info {
+                width: 30%;
+                margin: 0 auto;
+            }
+        </style>
+
         <link rel="stylesheet" href="./css/animate.css">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
 
         <link rel="stylesheet" href="./css/responsive.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="./js/app.js"></script>
     </head>
 
     <body id="home">
@@ -28,10 +42,10 @@
                 <nav>
                     <ul>
                         <li><a href="#">Home</a> </li>
-                        <li><a href="#">The Mission</a></li>
-                        <li><a href="#">Enlist Form</a></li>
-                        <li><a href="#">Free Swag</a></li>
-                        <li><a href="#">Battalion</a> </li>
+                        <li><a href="#mission">The Mission</a></li>
+                        <li><a href="#enlist">Enlist Form</a></li>
+                        <li><a href="#battalion">Battalion</a> </li>
+                        <li><a href="#swag">Free Swag</a></li>
                     </ul>
                 </nav>
             </div>
@@ -46,54 +60,127 @@
             </div>    
         </header>
 
-        <div id="snow"></div>
+        <div id="snow"></div>          
 
-        <div class="jumbotron content-box">
-            <h1>The Mission</h1>
-            <div class="mycontainer">
-                <p>
-                    On Saturday, January 23, 2016, our beloved New York City was attacked by <span> Winter Snow Storm Jonas</span>, whom was sent by our arch-nemesis <span>Olaf the Snowman</span>.  
-                </p>
-                <img id="olaf1" src="./img/olaf.png" alt="">
-                <img id="olaf2" src="./img/olaf2.png" alt="">
-
-                <p>
-                    We are looking for <span>brave souls</span> who are willing to <span id="cross-out">shovel snow</span> <span>risk their lives</span> to undo the destruction caused by Jonas.
-                </p>   
-            </div>
-        </div>
-
-        <div class="jumbotron content-box">
-            <h1>Free Swag</h1>
-            <div class="mycontainer">
-                <p class="animated pulse infinite">
-                    A hero is <span>YOU</span>!
-                </p>
-
-                <p>
-                    Now you too can become a legendary <span>Shovel Knight</span>!
-                </p>
-                <p>
-                    Enlist now and get your own <span>Shovel of Power</span> for <span> FREE </span>!
-                </p>
-
-                <img id="shovel" src="./img/shovel.png" alt="">
-
-                <p id="fine-print">Shipping and handling not included.</p>
-
-                <p>
-                    Call <span>1-800-KNIGHTS</span> to join!
-                </p>    
-            </div>
-        </div>
-
-    </body>
-
-    <div class="bottom-fixed">
-        <div class="donate">
-            <img id="gold" src="./img/gold.png" alt="">
-            <h1>DONATE TODAY!</h1>
-            <img id="donate-knight" src="./img/shovel_knight3.png" alt="">
+    <div id="mission" class="jumbotron content-box">
+        <h1>The Mission</h1>
+        <div class="mycontainer">
+            <p>
+                On Saturday, January 23, 2016, our beloved New York City was attacked by <span> Winter Snow Storm Jonas</span>, whom was sent by our arch-nemesis <span>Olaf the Snowman</span>.
+            </p>
+            <img id="olaf1" src="./img/olaf.png" alt="">
+            <img id="olaf2" src="./img/olaf2.png" alt="">
+            <p>
+                We are looking for <span>brave souls</span> who are willing to <span id="cross-out">shovel snow</span> <span>risk their lives</span> to undo the destruction caused by Jonas.
+            </p>
         </div>
     </div>
+
+    <div id="enlist" class="jumbotron content-box">
+        <h1>Enlist Form</h1>
+        <div class="mycontainer" id="enlistmentcontainer">
+            <div class="alert alert-info" id="infoalert" role="alert">Please fill out the form below!</div>
+            <form id="enlistform">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="InputEmail1" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="fname">Full Name</label>
+                    <input type="text" class="form-control" id="Inputfname1" placeholder="First Last">
+                </div>
+                <div class="form-group">
+                    <label for="phonenumber">Phone #</label>
+                    <input type="text" class="form-control" id="Inputphonenumber1" placeholder="(555)-555-5555">
+                </div>
+                <div class="form-group">
+                    <label for="district">District</label>
+                    <br>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default"><span id="defaultselected1">Queens</span></button>
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span> </button>
+                        <ul class="dropdown-menu" id="dropdowndistrict">
+                            <li><a href="javascript:void(0);" id="queens">Queens</a></li>
+                            <li><a href="javascript:void(0);" id="bronx">Bronx</a></li>
+                            <li><a href="javascript:void(0);" id="manhatten">Manhatten</a></li>
+                            <li><a href="javascript:void(0);" id="brooklyn">Brooklyn</a></li>
+                            <li><a href="javascript:void(0);" id="statenisland">Staten Island</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="agreementcheck"> I agree to all terms and conditions.
+                    </label>
+                </div>
+                <button type="submit" id="submitbutton1" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="battalion" class="jumbotron content-box">
+        <h1>Battalion</h1>
+        <div class="mycontainer">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>District</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableinsert">
+                       <!--  <tr>
+                            <td>Anna</td>
+                            <td>Pitt</td>
+                            <td>35</td>
+                            <td>New York</td>
+                            <td>USA</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="swag" class="jumbotron content-box">
+        <h1>Free Swag</h1>
+        <div class="mycontainer">
+            <p class="animated pulse infinite">
+                A hero is <span>YOU</span>!
+            </p>
+
+            <p>
+                Now you too can become a legendary <span>Shovel Knight</span>!
+            </p>
+            <p>
+                Enlist now and get your own <span>Shovel of Power</span> for <span> FREE </span>!
+            </p>
+
+            <img id="shovel" src="./img/shovel.png" alt="">
+
+            <p id="fine-print">Shipping and handling not included.</p>
+
+            <p>
+                Call <span>1-800-KNIGHTS</span> to join!
+            </p>
+        </div>
+    </div>
+
+</body>
+
+<div class="bottom-fixed">
+    <div class="donate">
+        <img id="gold" src="./img/gold.png" alt="">
+        <h1>DONATE TODAY!</h1>
+        <img id="donate-knight" src="./img/shovel_knight3.png" alt="">
+    </div>
+</div>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 </html>
